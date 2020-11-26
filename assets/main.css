@@ -1,6 +1,66 @@
 @font-face {
-  font-family: "Lettersketch";
-  src: url(/assets/src/fonts/Lettersketch-ow1wV.ttf);
+    font-family: 'Lettersketch';
+    src: url(/assets/src/fonts/Lettersketch-ow1wV.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.body{
+    background-image: url(/assets/src/images/spacebackground.jpg);
+    color: yellow;
+    background-size: cover;
+    font-family: 'Lettersketch','Courier New', Courier, monospace;
+}
+.header_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.display_container{
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 50vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: #dadbd7 ;
+    border-width: 10px 5px;
+    border-style: solid double;
+    border-radius: 5%;
+    background-color: #00ea3840;
+}
+.score_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.meteorite_container{
+    position: absolute;
+    max-width: 8%;
+    min-width: 3%;
+    width: 5%;
+    top: 3%;
+    left: 2%;
+}
+.spaceship_container{
+    position: absolute;
+    max-width: 8%;
+    min-width: 3%;
+    width: 5%;
+    top: 3%;
+    left: 2%;
+}
+.game{
+    position: relative;
+}
+.meteorite{
+    width: 100%;
+    height: auto;
+    font-family: "Lettersketch";
+    src: url(/assets/src/fonts/Lettersketch-ow1wV.ttf);
 }
 
 .body {
@@ -51,8 +111,6 @@
 
 }
 
-/*----------------------------*/
-
 /*---------User score----------*/
 .score_container {
   display: flex;
@@ -98,10 +156,10 @@
   font-size: 30px;
 }
 
-/*--------------------------------*/
 
 @media (max-width:800px){
     .score_container__level {
         width: 80%;
       }
+
 }
