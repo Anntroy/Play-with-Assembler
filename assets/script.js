@@ -1,25 +1,3 @@
-// const users = [
-//   {
-//     name: "Leia",
-//     level: "expert",
-//     score: 20,
-//   },
-//   {
-//     name: "Luke",
-//     level: "beginner",
-//     score: 50,
-//   },
-//   {
-//     name: "Darth Vader",
-//     level: "expert",
-//     score: 10,
-//   },
-//   {
-//     name: "Chiwaka",
-//     level: "beginner",
-//     score: 30,
-//   },
-// ];
 
 
 //Show the scores of beginner users

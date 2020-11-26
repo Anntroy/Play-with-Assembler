@@ -14,7 +14,8 @@ function changePosition(e){
     countTitle.textContent=scoreCurrentGame;
     postionMeteorite();
     postionSpaceship();
-    console.log(e)
+    console.log(e);
+    user.userScore = scoreCurrentGame;
 }
 function postionMeteorite(){
     meteorite.style.top= getRandomNumberTop() + "%";
