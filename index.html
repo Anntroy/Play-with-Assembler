@@ -10,7 +10,9 @@
 <body class="body">
     <header id="header" class="header_container">
         <h1 id="logo" class="header_container__logo">Space Defense</h1>
-        <div id="count" class="header_container__logo"></div>
+        <div id="count" class="header_container__count">
+            <h2 id="count_title">Destroyed = <span>0</span></h2>
+        </div>
     </header>
     <main>
         <div id="display" class="display_container">
@@ -22,15 +24,24 @@
             </form>
         </div>
         <div id="score" class="score_container">
-            <h2 class="score_container__title">SCORES</h2>
-            <!-- <div id="personCard">
-                <p id="personName"></p>
-                <p id="personScore"></p>
-            </div> -->
+            <h2 class="score_container__title">USER SCORES</h2>
+            <div class="score_container__scores">
+                <div id="beginner" class="score_container__level">
+                    <h3>Beginner</h3>
+                    <div id="person_card_beginner" class="person_card">
+                    </div>
+                </div>
+                <div id="expert" class="score_container__level">
+                    <h3>Expert</h3>
+                    <div id="person_card_expert" class="person_card">
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <!-- <script src="/assets/gameplay.js"></script> -->
     <script src="/assets/login.js"></script>
+    <script src="/assets/gameplay.js"></script>
     <script  src="/assets/script.js"></script>
 </body>
 </html>
