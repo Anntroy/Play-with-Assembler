@@ -1,6 +1,7 @@
 const meteorite=document.querySelector(".meteorite_container");
 const countTitle=document.querySelector("#count_title span");
 const spaceship=document.querySelector(".spaceship_container");
+const laser=document.getElementById("laser");
 let scoreCurrentGame=0;
 meteorite.addEventListener('click',changePosition)
 spaceship.addEventListener('click',losePoint)
@@ -11,6 +12,7 @@ postionMeteorite();
 postionSpaceship();
 function changePosition(e){
     scoreCurrentGame++
+    laser.play();
     countTitle.textContent=scoreCurrentGame;
     postionMeteorite();
     postionSpaceship();
