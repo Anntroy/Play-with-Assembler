@@ -3,6 +3,10 @@
     src: url(/assets/src/fonts/Lettersketch-ow1wV.ttf);
 }
 
+*{
+    margin: 0;
+    padding: 0;
+}
 .body{
     background-image: url(/assets/src/images/spacebackground.jpg);
     color: yellow;
@@ -32,4 +36,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.meteorite_container{
+    position: absolute;
+    max-width: 8%;
+    min-width: 3%;
+    width: 5%;
+    top: 3%;
+    left: 2%;
+}
+.spaceship_container{
+    position: absolute;
+    max-width: 8%;
+    min-width: 3%;
+    width: 5%;
+    top: 3%;
+    left: 2%;
+}
+.game{
+    position: relative;
+}
+.meteorite{
+    width: 100%;
+    height: auto;
 }
