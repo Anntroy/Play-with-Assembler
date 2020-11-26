@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Lettersketch';
+    src: url(/assets/src/fonts/Lettersketch-ow1wV.ttf);
+}
+
+.body{
+    background-image: url(/assets/src/images/spacebackground.jpg);
+    color: yellow;
+    background-size: cover;
+    font-family: 'Lettersketch','Courier New', Courier, monospace;
+}
+.header_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.display_container{
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 50vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: #dadbd7 ;
+    border-width: 10px 5px;
+    border-style: solid double;
+    border-radius: 5%;
+    background-color: #00ea3840;
+}
+.score_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
