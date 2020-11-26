@@ -10,12 +10,17 @@
     <header id="header" class="header_container">
         <h1 id="logo" class="header_container__logo">Space Defense</h1>
         <div id="count" class="header_container__count">
-            <h2 id="count_title">Destroyed =</h2>
+            <h2 id="count_title">Destroyed = <span>0</span></h2>
         </div>
     </header>
     <main>
-        <div id="display" class="display_container">
-
+        <div id="display" class="display_container game">
+            <div class="meteorite_container">
+                <img id="meteorite" class="meteorite" src="/assets/src/images/meteorite.png" alt="meteorite">
+            </div>
+            <div class="spaceship_container">
+                <img id="spaceship" class="meteorite" src="/assets/src/images/spaceship.png" alt="spaceship">
+            </div>
         </div>
         <div id="score" class="score_container">
             <h2 class="score_container__title">SCORES</h2>
@@ -25,5 +30,6 @@
             </div> -->
         </div>
     </main>
+    <script src="/assets/gameplay.js"></script>
 </body>
 </html>
