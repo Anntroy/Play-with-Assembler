@@ -35,3 +35,61 @@ var expertUsers = usersArray.filter((user) => user.userLevel == "expert");
 var expertResult = expertUsers.map((user) => `<div class="person_score_input"><p id="person_name_expert">${user.userName}</p>
 <p id="person_score_expert"><span class="score_count">${user.userScore}</span> clicks</p></div>`)
 expertScoreCard.innerHTML = expertResult.join(' ');
+const displayContainer = document.getElementById("display");
+const submitButton = document.getElementById("submitBtn");
+const startButton = document.getElementById("startButton");
+
+submitButton.addEventListener("click", goToLevelPage);
+
+function goToLevelPage () {
+    displayContainer.innerHTML = "";
+    displayContainer.innerHTML =`
+    <form class="display_container__form" action="">
+    <legend class="display_container__legend">Chose your level</legend><br>
+    <div class="display_container__div">
+        <button type="submit" class="display_container__button" id="beginers">Beginers</button>
+        <button type="submit" class="display_container__button" id="experts">Experts</button>
+    </div>
+</form>`
+};
+
+const levelBeginers = document.getElementById("beginers");
+const levelExperts = document.getElementById("experts");
+let beginnerMode = false;
+let expertMode = false;
+
+levelBeginers.addEventListener('click', function (){
+    beginnerMode = true;
+    goToStartPage();
+});
+
+levelExperts.addEventListener('click', function (){
+    expertMode = true;
+    goToStartPage();
+});
+
+
+
+function goToStartPage() {
+    displayContainer.innerHTML = "";
+    displayContainer.innerHTML =`
+    <button id="startButton" class="button">Start Game</button>
+    `
+};
+
+startButton.addEventListener("click", function(){
+    let counter = 3;
+    let parrafo = document.createElement("p");
+    startButton.classList.add("oculto");
+    parrafo.style.fontSize = "100px";
+    displayContainer.appendChild(parrafo);
+    let interval = setInterval(() => {
+        parrafo.innerHTML = counter;
+        if (counter === 0) {
+            clearInterval(interval);
+            parrafo.classList.add("oculto");
+            // Insertamos la siguiente parte.
+        }
+        counter--
+    }, 1000);
+});
