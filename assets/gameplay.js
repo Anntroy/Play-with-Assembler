@@ -30,6 +30,7 @@ function postionSpaceship(){
 }
 function losePoint(){
     scoreCurrentGame=0;
+    laser.play();
     countTitle.textContent=scoreCurrentGame;
 }
 function getRandomNumberTop(){
