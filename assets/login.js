@@ -1,26 +1,48 @@
 const userName = document.getElementById("username");
 const submitUserNameBtn = document.getElementById("submitBtn");
-let usersArray = [];
+
+// let usersArray = [];
+
+let usersArray = [
+  {
+    userName: "Leia",
+    userLevel: "expert",
+    userScore: 20,
+  },
+  {
+    userName: "Luke",
+    userLevel: "beginner",
+    userScore: 50,
+  },
+  {
+    userName: "Darth Vader",
+    userLevel: "expert",
+    userScore: 10,
+  },
+  {
+    userName: "Chiwaka",
+    userLevel: "beginner",
+    userScore: 30,
+  },
+];
 
 class User {
-    constructor(username, userlevel, userscore) {
-      this.userName = username;
-      this.userLevel = userlevel;
-      this.userScore = userscore;
-    }
+  constructor(username, userlevel, userscore) {
+    this.userName = username;
+    this.userLevel = userlevel;
+    this.userScore = userscore;
   }
-  
-  const user = new User('testUsername','testLevel','testScore');
+}
 
-userName.addEventListener('keyup', () => {
-    submitUserNameBtn.disabled = !userName.value
+const user = new User("", "", "");
+
+userName.addEventListener("keyup", () => {
+  submitUserNameBtn.disabled = !userName.value;
 });
 
 submitUserNameBtn.addEventListener("click", function (e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    user.userName = userName.value;
-    usersArray.push(user);
+  user.userName = userName.value;
+  usersArray.push(user);
 });
-
-

@@ -78,10 +78,24 @@
   border-radius: 10px;
 }
 
-.person_card {
+.score_container__level h3 {
+  font-size: 20px;
+}
+.person_card div{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  color: white;
+}
+
+.person_score_input {
+ margin: 10px 0;
+ line-height: 5px;
+}
+
+.score_count {
+  color: yellow;
+  font-size: 30px;
 }
 
 /*--------------------------------*/
