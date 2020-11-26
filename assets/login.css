@@ -1,0 +1,33 @@
+.display_container__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.display_container__legend {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 1.5em;
+}
+
+.display_container__label {
+    font-size: .8em;
+}
+
+.display_container__input{
+    height: 1.4em;
+    width: 110%;
+    max-width: 600px;
+}
+
+.display_container__button {
+    color: yellow;
+    background-color: black;
+    height: 1.8em;
+    width: 80%;
+    text-decoration: none;
+    border: none;
+    font-family: 'Lettersketch','Courier New', Courier, monospace;
+}
+

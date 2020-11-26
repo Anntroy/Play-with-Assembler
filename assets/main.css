@@ -59,4 +59,93 @@
 .meteorite{
     width: 100%;
     height: auto;
+    font-family: "Lettersketch";
+    src: url(/assets/src/fonts/Lettersketch-ow1wV.ttf);
+}
+
+.body {
+  background-image: url(/assets/src/images/spacebackground.jpg);
+  color: yellow;
+  background-size: cover;
+  font-family: "Lettersketch", "Courier New", Courier, monospace;
+}
+.header_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.display_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 50vh;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: #dadbd7;
+  border-width: 10px 5px;
+  border-style: solid double;
+  border-radius: 5%;
+  background-color: #00ea3840;
+}
+
+/*--------Your score-----------*/
+
+.display_container__your_score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+    background-color: black;
+    background-color: rgba(44, 44, 81, 0.571);
+    border: black;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin: 20px 0 0;
+    cursor: pointer;
+
+}
+
+/*---------User score----------*/
+.score_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score_container__scores {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.score_container__level {
+  width: 40%;
+  margin: 10px;
+  background-color: rgba(44, 44, 81, 0.299);
+  border: 2px solid yellow;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.person_card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+@media (max-width:800px){
+    .score_container__level {
+        width: 80%;
+      }
+
 }
