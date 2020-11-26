@@ -1,0 +1,19 @@
+.score_container__scores {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.score_container__level {
+    width: 40%;
+    margin: 10px;
+    background-color: rgb(104, 104, 133);
+    padding: 10px 20px;
+}
+
+.person_card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
