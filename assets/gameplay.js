@@ -1,8 +1,33 @@
+const startButton = document.getElementById("startButton");
+startButton.addEventListener("click", function(){
+    let counter = 3;
+    let parrafo = document.createElement("p");
+    startButton.classList.add("oculto");
+    parrafo.style.fontSize = "100px";
+    displayContainer.appendChild(parrafo);
+    let interval = setInterval(() => {
+        parrafo.innerHTML = counter;
+        if (counter === 0) {
+            clearInterval(interval);
+            parrafo.classList.add("oculto");
+            // Insertamos la siguiente parte.
+        }
+        counter--
+    }, 1000);
+});
+
+
+
+
+
 const meteorite=document.querySelector(".meteorite_container");
 const countTitle=document.querySelector("#count_title span");
 const spaceship=document.querySelector(".spaceship_container");
 const laser=document.getElementById("laser");
+const displayContainer = document.getElementById("display");
 let scoreCurrentGame=0;
+
+
 meteorite.addEventListener('click',changePosition)
 spaceship.addEventListener('click',losePoint)
 // if(beginnerMode){
@@ -57,3 +82,7 @@ function getRandomNumberWidth(){
     return random*10;
 }
 setTimeout(()=>{alert("FINISH "+ scoreCurrentGame)},10000)
+
+
+
+
