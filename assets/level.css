@@ -1,32 +1,16 @@
 .display_container__div {
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
-    align-items: stretch;
 }
 
-/* .display_container__legend {
-    font-size: 1.1em;
-    font-weight: 600;
-    margin-bottom: 1.5em;
+.button_position1{
+    position: relative;
+    right: 50px;
+    padding: 0 20px;
 }
 
-.display_container__label {
-    font-size: .8em;
+.button_position2{
+    position: relative;
+    left: 50px;
+    padding: 0 20px;
 }
-
-.display_container__input{
-    height: 1.4em;
-    width: 110%;
-    max-width: 600px;
-}
-
-.display_container__button {
-    color: yellow;
-    background-color: black;
-    height: 1.8em;
-    width: 80%;
-    text-decoration: none;
-    border: none;
-    font-family: 'Lettersketch','Courier New', Courier, monospace;
-} */
