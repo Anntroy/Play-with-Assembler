@@ -6,6 +6,7 @@
 .button_position1{
     position: relative;
     right: 50px;
+    padding: 0 20px;
 }
 
 .button_position2{
