@@ -29,5 +29,6 @@
     text-decoration: none;
     border: none;
     font-family: 'Lettersketch','Courier New', Courier, monospace;
+    border-radius: 5px;
 }
 
