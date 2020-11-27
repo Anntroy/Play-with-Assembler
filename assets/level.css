@@ -3,16 +3,16 @@
     flex-direction: row;
 }
 
-.button_position1{
+.button_position1 {
     position: relative;
-    right: 50px;
-    padding: 0 30px;
+    right: 1.2em;
+    padding: 0 1em;
 }
 
-.button_position2{
+.button_position2 {
     position: relative;
-    left: 50px;
-    padding: 0 30px;
+    left: 1.2em;
+    padding: 0 1em;
 }
 
 .start_button {
