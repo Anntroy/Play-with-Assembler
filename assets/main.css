@@ -99,19 +99,9 @@
   justify-content: center;
 }
 
-.btn {
-    background-color: black;
-    background-color: rgba(44, 44, 81, 0.571);
-    border: black;
-    padding: 10px 20px;
-    color: white;
-    border-radius: 10px;
-    border: 2px solid white;
-    margin: 20px 0 0;
-    cursor: pointer;
-
+.display_container__your_score_h2 {
+  margin-bottom: 1em;
 }
-
 /*---------User score----------*/
 .score_container {
   display: flex;
