@@ -10,7 +10,9 @@
 <body class="body">
     <header id="header" class="header_container">
         <h1 id="logo" class="header_container__logo">Space Defense</h1>
-        <div id="count" class="header_container__logo"></div>
+        <div id="count" class="header_container__count">
+            <h2 id="count_title">Destroyed = <span>0</span></h2>
+        </div>
     </header>
     <main>
         <div id="display" class="display_container">
@@ -21,16 +23,60 @@
                 <button type="submit" class="display_container__button" id="submitBtn">Start</button>
             </form>
         </div>
+
+        
+        <div id="display2" class="display_container oculto">
+            <form class="display_container__form" action="">
+                <legend class="display_container__legend">Chose your level</legend><br>
+                <div class="display_container__div">
+                    <button type="submit" class="display_container__button" id="beginers">Beginers</button>
+                    <button type="submit" class="display_container__button" id="experts">Experts</button>
+                </div>
+            </form>
+        </div>
+
+
+        <div id="display3" class="display_container oculto">
+            <button id="startButton" class="button">Start Game</button>
+        </div>
+
+
+        <div id="display4" class="display_container game oculto">
+            <div class="meteorite_container">
+                <img id="meteorite" class="meteorite" src="/assets/src/images/meteorite.png" alt="meteorite">
+            </div>
+            <div class="spaceship_container">
+                <img id="spaceship" class="meteorite" src="/assets/src/images/spaceship.png" alt="spaceship">
+            </div>
+            <audio id="laser"src="assets/src/audio/laser.mp3"></audio>
+        </div>
+
+
+        <div id="display5" class="display_container oculto">
+            <div class="display_container__your_score">
+                <h2>YOUR SCORE</h2>
+                <p>Your 10 seconds are done!</p>
+                <p>You have made <span id="click_count">0</span> clicks</p>
+                <button class="btn" id="play_again">Play again</button>
+            </div>
+        </div>
         <div id="score" class="score_container">
-            <h2 class="score_container__title">SCORES</h2>
-            <!-- <div id="personCard">
-                <p id="personName"></p>
-                <p id="personScore"></p>
-            </div> -->
+            <h2 class="score_container__title">USER SCORES</h2>
+            <div class="score_container__scores">
+                <div id="beginner" class="score_container__level">
+                    <h3>Beginner</h3>
+                    <div id="person_card_beginner" class="person_card">
+                    </div>
+                </div>
+                <div id="expert" class="score_container__level">
+                    <h3>Expert</h3>
+                    <div id="person_card_expert" class="person_card">
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <!-- <script src="/assets/gameplay.js"></script> -->
-    <script src="/assets/login.js"></script>
     <script  src="/assets/script.js"></script>
 </body>
 </html>
