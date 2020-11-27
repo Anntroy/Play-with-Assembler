@@ -1,11 +1,18 @@
+let usersArray = [
 
+];
+
+const user ={
+    userName : "",
+    userLevel : "",
+    userScore : "",
+}
 
 const display = document.getElementById("display");
 const display2 = document.getElementById("display2");
 const display3 = document.getElementById("display3");
 const display4 = document.getElementById("display4");
 const display5 = document.getElementById("display5");
-const display6 = document.getElementById("score");
 
 const levelExperts = document.getElementById("experts");
 const levelBeginers = document.getElementById("beginers");
@@ -16,7 +23,6 @@ const spaceship = document.querySelector(".spaceship_container");
 const laser = document.getElementById("laser");
 const submitButton = document.getElementById("submitBtn");
 const playAgain = document.getElementById("play_again");
-// const userNameText = document.getElementById("username");
 const displayUserScore = document.getElementById("click_count");
 
 let beginnerMode = false;
@@ -24,10 +30,14 @@ let expertMode = false;
 let scoreCurrentGame = 0;
 let page = 1;
 
+
+
+
+
 submitButton.addEventListener("click", login);
 function login(e) {
   e.preventDefault();
-  usersArray.push(user);
+  user.userName = username.value;
   controlPage();
 }
 
@@ -61,20 +71,31 @@ function controlPage() {
       startGame();
       display3.classList.toggle("oculto");
       display4.classList.toggle("oculto");
-      display6.classList.toggle("oculto");
       break;
     case 4:
       console.log("case 4");
+      spaceship.classList.remove("oculto");
       user.userScore = scoreCurrentGame;
       displayUserScore.innerHTML = scoreCurrentGame;
       page++;
       playAgain.addEventListener("click", controlPage);
       display4.classList.toggle("oculto");
       display5.classList.toggle("oculto");
+      const userCurrently ={
+        userName : "",
+        userLevel : "",
+        userScore : "",
+      }
+      Object.assign(userCurrently,user);
+      usersArray.push(userCurrently);
+      displayUserScores();
       break;
     case 5:
       console.log("case 5");
-      user.userScore = scoreCurrentGame;
+      beginnerMode=false;
+      user.userName = "";
+      user.userLevel="";
+      user.userScore="";
       page = 1;
       playAgain.removeEventListener("click", controlPage);
       submitButton.addEventListener("click", login);
@@ -112,6 +133,7 @@ function countStart(e) {
       clearInterval(interval);
       parrafo.classList.add("oculto");
       controlPage();
+      startButton.classList.remove("oculto");
     }
     counter--;
   }, 1000);
@@ -147,6 +169,8 @@ function startGame() {
   }
   function losePoint() {
     scoreCurrentGame = 0;
+    postionMeteorite();
+    postionSpaceship();
     laser.play();
     countTitle.textContent = scoreCurrentGame;
   }
@@ -176,76 +200,28 @@ function startGame() {
 }
 
 
-
-let usersArray = [
-  {
-    userName: "Leia",
-    userLevel: "expert",
-    userScore: 20,
-  },
-  {
-    userName: "Luke",
-    userLevel: "beginner",
-    userScore: 50,
-  },
-  {
-    userName: "Darth Vader",
-    userLevel: "expert",
-    userScore: 10,
-  },
-  {
-    userName: "Chiwaka",
-    userLevel: "beginner",
-    userScore: 30,
-  },
-  {
-    userName: "Ewok",
-    userLevel: "beginner",
-    userScore: 10,
-  },
-];
-
-class User {
-    constructor(username, userlevel, userscore) {
-      this.userName = username;
-      this.userLevel = userlevel;
-      this.userScore = userscore;
-    }
-  }
-  
-  const user = new User("", "", "");
-  user.userName = username.value;
-
-
-// function displayCurrentUser() {
-//   if (user.userLevel == "beginner") {
-//     beginnerUsers.push(user);
-//   } else if (user.userLevel == "expert") {
-//     expertUsers.push(user);
-//   }
-// }
-// displayCurrentUser();
-
-
 //Show the scores of beginner users
-var beginnerScoresCard = document.getElementById("person_card_beginner");
-var beginnerUsers = usersArray.filter((user) => user.userLevel == "beginner");
 
-var beginnerResults = beginnerUsers.map(
-  (
-    user
-  ) => `<div class="person_score_input"><p class="person_name_beginner">${user.userName}</p>
+function displayUserScores() {
+  var beginnerScoresCard = document.getElementById("person_card_beginner");
+  var beginnerUsers = usersArray.filter((user) => user.userLevel == "beginner");
+
+  var beginnerResults = beginnerUsers.map(
+    (
+      user
+    ) => `<div class="person_score_input"><p class="person_name_beginner">${user.userName}</p>
 <p class="person_score_beginner"><span class="score_count">${user.userScore}</span> clicks</p></div>`
-);
-beginnerScoresCard.innerHTML = beginnerResults.join(" ");
+  );
+  beginnerScoresCard.innerHTML = beginnerResults.join(" ");
 
-//Show the scores of expert users
-var expertScoreCard = document.getElementById("person_card_expert");
-var expertUsers = usersArray.filter((user) => user.userLevel == "expert");
-var expertResult = expertUsers.map(
-  (
-    user
-  ) => `<div class="person_score_input"><p id="person_name_expert">${user.userName}</p>
+  //Show the scores of expert users
+  var expertScoreCard = document.getElementById("person_card_expert");
+  var expertUsers = usersArray.filter((user) => user.userLevel == "expert");
+  var expertResult = expertUsers.map(
+    (
+      user
+    ) => `<div class="person_score_input"><p id="person_name_expert">${user.userName}</p>
 <p id="person_score_expert"><span class="score_count">${user.userScore}</span> clicks</p></div>`
-);
-expertScoreCard.innerHTML = expertResult.join(" ");
+  );
+  expertScoreCard.innerHTML = expertResult.join(" ");
+}
