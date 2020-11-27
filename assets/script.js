@@ -71,10 +71,10 @@ function controlPage() {
       startGame();
       display3.classList.toggle("oculto");
       display4.classList.toggle("oculto");
-      
       break;
     case 4:
       console.log("case 4");
+      spaceship.classList.remove("oculto");
       user.userScore = scoreCurrentGame;
       displayUserScore.innerHTML = scoreCurrentGame;
       page++;
@@ -85,8 +85,7 @@ function controlPage() {
         userName : "",
         userLevel : "",
         userScore : "",
-    }
-    
+      }
       Object.assign(userCurrently,user);
       usersArray.push(userCurrently);
       displayUserScores();
@@ -170,6 +169,8 @@ function startGame() {
   }
   function losePoint() {
     scoreCurrentGame = 0;
+    postionMeteorite();
+    postionSpaceship();
     laser.play();
     countTitle.textContent = scoreCurrentGame;
   }
@@ -198,14 +199,6 @@ function startGame() {
   }
 }
 
-// function displayCurrentUser() {
-//   if (user.userLevel == "beginner") {
-//     beginnerUsers.push(user);
-//   } else if (user.userLevel == "expert") {
-//     expertUsers.push(user);
-//   }
-// }
-// displayCurrentUser();
 
 //Show the scores of beginner users
 
