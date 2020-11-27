@@ -6,11 +6,19 @@
 .button_position1{
     position: relative;
     right: 50px;
-    padding: 0 20px;
+    padding: 0 30px;
 }
 
 .button_position2{
     position: relative;
     left: 50px;
-    padding: 0 20px;
+    padding: 0 30px;
+}
+
+.start_button {
+    width: 150px;
+}
+
+.play_button {
+    margin: 2em;
 }
