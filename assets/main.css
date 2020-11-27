@@ -39,6 +39,7 @@
     align-items: center;
 }
 .meteorite_container{
+    cursor: crosshair;
     position: absolute;
     max-width: 8%;
     min-width: 3%;
@@ -47,6 +48,7 @@
     left: 2%;
 }
 .spaceship_container{
+    cursor: crosshair;
     position: absolute;
     max-width: 8%;
     min-width: 3%;
